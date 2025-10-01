@@ -57,15 +57,52 @@ h1{
     color: var(--cor-texto-secundario);
     margin-top: 0;
     margin-bottom: 20px;
+    /* mude o margin botton para 30px era 20px*/
 }
 
 /* S. Estilos dos campos do formulário */
 input, button{
     width: 100%;
     box-sizing: border-box;
-    padding: 12px;
+    margin: 10px 0;
+    padding: 14px;
     font-size: 16px;
     border-radius: 8px;
     border: 1px solid var(--cor-borda);
     transition: all 0.3s ease;
+}
+
+input: :focus{
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 8px blue;
+}
+
+button{
+    cursor: pointer;
+    font-weight: 600;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+/*6. Estilo do resultado*/
+
+#resultado{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    min-height: 25px;
+    color: var(--cor-primaria);
+    opacity: 0;
+    transition: opacity 0.5s ;
+
+}
+
+#resultado.visível{
+    opacity: 1;
 }
