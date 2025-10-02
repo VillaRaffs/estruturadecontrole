@@ -1,18 +1,17 @@
-/* Fontese variaveis de cor */
-
+/* Fontes e variáveis de cor */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root{
-    --cor-fundo: white;
-    --cor-container:white;
-    --cor-primaria: pink;
-    --cor-texto-principal: gray;
-    --cor-texto-secundario: black;
-    --cor-borda: white;
-    --fonte-principal: 'Poppins', sans-serif;
+    --cor-fundo: #000000; 
+    --cor-container: #000000;
+    --cor-primaria: #fe679cff;
+    --cor-texto-principal: #ffffff;
+    --cor-texto-secundario: #ffa5c5;
+    --cor-borda: #fe679cff;
+    --fonte-principal: 'Popins', sans-serif;
 }
 
-/* 2. Estlos Gerais*/
+/* 2. Estilos  Gerais*/
 
 body{
     background-color: var(--cor-fundo);
@@ -23,29 +22,31 @@ body{
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    /* impede que o conteúdo do body afete o canvas*/
+    /* impede que o conteúdo do body afete o canvas */
+    overflow: hidden;
 }
 
-/* Estilo do canvas defundo*/
+
+/* Estilo do canvas de fundo */
 #background-canvas{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Garante que o canvas fique atrás de todo o conteúdo*/
+    /* Garante que o canvas fique atrás de todo o conteúdo */
     z-index: -1;
 }
 
-/*4. 0 container do formulário (Besing Clássico)*/
+/* 4. O container do formulário (Desing Clássico) */
 .container{
     width: 380px;
     padding: 40px;
     background-color: var(--cor-container);
     border-radius: 12px;
-    box-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    border: 1px solid var(--cor-borda);
+    border: 1px solid var(--cor-borda);    
 }
 
 h1{
@@ -56,17 +57,21 @@ h1{
 .subtitulo{
     color: var(--cor-texto-secundario);
     margin-top: 0;
-    margin-bottom: 20px;
-    /* mude o margin botton para 30px era 20px*/
+    margin-bottom: 30px; 
+    /* mudei o margin bottom para 30px era 20px*/
 }
 
-/* S. Estilos dos campos do formulário */
+/* 5. Estilos dos campos do formulário */
 input, button{
     width: 100%;
+    /* Garante que o padding não afete a largura total */
     box-sizing: border-box;
     margin: 10px 0;
+    /* adicionei um margin para colocar espaçamento */
     padding: 14px;
+    /* mudei o padding para 14px era 12px*/
     font-size: 16px;
+    font-family: var(--fonte-principal);
     border-radius: 8px;
     border: 1px solid var(--cor-borda);
     transition: all 0.3s ease;
@@ -75,7 +80,7 @@ input, button{
 input:focus{
     outline: none;
     border-color: var(--cor-primaria);
-    box-shadow: 0 0 8px blue;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
 }
 
 button{
@@ -87,22 +92,20 @@ button{
 }
 
 button:hover{
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
-/*6. Estilo do resultado*/
-
+/* 6. EStilo do resultado */
 #resultado{
     margin-top: 20px;
     font-size: 18px;
     font-weight: 600;
     min-height: 25px;
-    color: var(--cor-primaria);
+    color: var(--cor-primaria); 
     opacity: 0;
-    transition: opacity 0.5s ;
-
+    transition: opacity 0.5s ease;
 }
 
-#resultado.visível{
+#resultado.visivel{
     opacity: 1;
 }
