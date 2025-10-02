@@ -1,6 +1,6 @@
 /* Fontese variaveis de cor */
 
-@import url('https://fonts.googleapis.com/css2?family=Popins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root{
     --cor-fundo: white;
@@ -9,7 +9,7 @@
     --cor-texto-principal: gray;
     --cor-texto-secundario: black;
     --cor-borda: white;
-    --fonte-principal: 'Popins', sans-serif;
+    --fonte-principal: 'Poppins', sans-serif;
 }
 
 /* 2. Estlos Gerais*/
@@ -27,7 +27,7 @@ body{
 }
 
 /* Estilo do canvas defundo*/
-#backgroundCanvas{
+#background-canvas{
     position: fixed;
     top: 0;
     left: 0;
@@ -72,7 +72,7 @@ input, button{
     transition: all 0.3s ease;
 }
 
-input: :focus{
+input:focus{
     outline: none;
     border-color: var(--cor-primaria);
     box-shadow: 0 0 8px blue;
